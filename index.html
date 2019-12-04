@@ -21,28 +21,29 @@
 </style>
 </head>
 <body translate="no">
-<h2 id="maintitle">to do list</h2>
+<h2 id="mainTitle">To do list</h2>
+<ul class="myLists" id="firstList">
+<li class="odd">Do math homework</li>
+<li class="even">Check social media</li>
 </ul>
-<li class="odd"> finish your QRQ</li>
-<li class="even"> complete your writing guide for biology
-<li class="even"> finish your writing assignment for History</li>
-</ul>
-<BUTTON ID="ADDiTEM">Add</BUTTON>
-<INPUT ID="THEITEM">
+<button id="addItem">Add</button>
+<input id="theItem">
 <script id="rendered-js">
       console.clear();
-console.log('HELLO WORLD')
+console.log("hello world");
 
-const addbutton = document.getElementById("additem")
-addButton.addEventListener('click',doClick);
+const addButton = document.getElementById("addItem");
+addButton.addEventListener("click", doClick);
 
-function doClick(e){
+function doClick(e) {
   const theValue = document.getElementById("theItem").value;
-  var node = document.createElement("LI");           
-var textnode = document.createTextNode("Water");     
-node.appendChild(textnode);                         
-document.getElementById("myList").appendChild(node); 
+  console.log(theValue);
+  var node = document.createElement("li");
+  var textnode = document.createTextNode(theValue);
+  node.appendChild(textnode);
+  document.getElementById("firstList").appendChild(node);
 }
     </script>
 </body>
 </html>
+
