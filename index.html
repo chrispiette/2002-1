@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - A Pen by  chris</title>
+<style>
+  #maintitle{
+  background: lightblue;    
+    font-size: 150%;
+  color:#4E008E
+}
+.odd{
+  Background: #8ABAD3
+}
+.even{
+  background: #AAE2E0
+}
+</style>
+</head>
+<body translate="no">
+<h2 id="maintitle">to do list</h2>
+</ul>
+<li class="odd"> finish your QRQ</li>
+<li class="even"> complete your writing guide for biology
+<li class="even"> finish your writing assignment for History</li>
+</ul>
+<BUTTON ID="ADDiTEM">Add</BUTTON>
+<INPUT ID="THEITEM">
+<script id="rendered-js">
+      console.clear();
+console.log('HELLO WORLD')
+
+const addbutton = document.getElementById("additem")
+addButton.addEventListener('click',doClick);
+
+function doClick(e){
+  const theValue = document.getElementById("theItem").value;
+  var node = document.createElement("LI");           
+var textnode = document.createTextNode("Water");     
+node.appendChild(textnode);                         
+document.getElementById("myList").appendChild(node); 
+}
+    </script>
+</body>
+</html>
